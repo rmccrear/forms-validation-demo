@@ -1,54 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Validation Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
+
 <body>
 
     <header>
-        <h1>
-            Haus Of Percussion
-        </h1>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
-            </ul>
+        <nav class="navbar navbar-expand bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand">Haus Of Percusiion</a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item active"> 
+                        <a href="#" class="nav-link">
+                            Home 
+                        </a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a href="#" class="nav-link"> 
+                            About 
+                        </a> 
+                    </li>
+                    <li class="nav-item"> 
+                        <a href="contact.html" class="nav-link" >
+                            Contact
+                        </a>
+                     </li>
+                </ul>
+                <a href="#contact-form">
+                    <button class="btn btn-outline-success" type="button">Contact Me</button>
+                </a>
+            </div>
         </nav>
-        <a href="#contact-form">
-            <button>
-              Contact Me
-            </button>
-        </a>
     </header>
     <main>
         <div class="hero">
-            <img src="img/drums.jpg" >
+            <img src="img/drums.jpg">
         </div>
         <form id="contact-form">
-            <label>
-                First Name<input type="text"/>
+            <label class="form-label">
+                First Name<input class = "form-control" type="text" />
             </label>
-            <label for="lname">
+            <label for="lname" class="form-label">
                 Last name:
             </label>
-                <input type="text" id="lname" name="lname"/>
-            <label>Occupation:
-                <input type="text">
-            </label>            
-            <label for="telephone">
+            <input class= "form-control" type="text" id="lname" name="lname" />
+            <label class = "form-label">Occupation:
+                <input type="text" class="form-control">
+            </label>
+            <label for="telephone" class="form-label">
                 Phone Number
             </label>
-            <input id="telephone" type="tel"/> 
-            
+            <input id="telephone" type="text" class="form-control"/>
 
-            <label for="email-addres">
+
+            <label for="email-addres" class="form-label">
                 Email:
             </label>
-            <input type="email" id="email-address">
+            <input class ="form-control" type="text" id="email-address">
             <button type="button" id="my-button">Submit</button>
         </form>
 
@@ -56,4 +70,5 @@
     <footer></footer>
     <script src="script.js"></script>
 </body>
+
 </html>
