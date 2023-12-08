@@ -49,28 +49,20 @@ tableElm = document.getElementById("lessons-table-2");
 
 // TODO: create the tr elements with a for loop
 // First, loop through the tableRows array with a for loop.
-let i = 0;
 for (let tableRow of tableRows) {
    console.log(tableRow);
    // tableRows[0] is ["type", "Skill Level", "time"]
    // tableRows[1] is ["Djumbe Dumming", "Beginner Level", "11:30-12:30"]
    let tr = document.createElement("tr");
    for (let tableData of tableRow){
-    if (i===0){
-        let th = document.createElement("th");
-        th.textContent = tableData;
-        tr.appendChild(th);
-    } else {
      // tr.textContent = tableRow[0];
      // tableRow[0] is Trumpet Lesson
      // tableRow[1] is Beginer Level
      // tableRow[2] is 3:00-4:00
-     let td = document.createElement("td");
-     td.textContent = tableData;
-     tr.appendChild(td);
-    }
-   }
-   i++;   
+    let td = document.createElement("td");
+    td.textContent = tableData;
+    tr.appendChild(td);
+   }   
    tableElm.appendChild(tr);
 }
 
