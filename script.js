@@ -4,7 +4,19 @@ console.log("hello");
 
 // TODO: Select all the inputs
 
-
+// detect if a VIP name is in the inputs
+function isVip(value){
+    let vips = [
+        "Robert", "Lynndale", "Laqwanda", "Isabella", "Jeremie", "Delta", "Jordan", "Kenyada"
+    ];
+    for(let name of vips){
+        if(value.toLowerCase() === name.toLowerCase()) {
+            console.log("Is VIP!!!")
+            return true;
+        }
+    }  
+    return false;
+}
 
 function validate() {
     let inputs;
@@ -30,16 +42,10 @@ function validate() {
         }
     }
 
-    // detect if a VIP name is in the inputs
-
     for (let input of inputs) {
-        let vips = [
-            "Robert", "Lynndale", "Laqwanda", "Isabella", "Jeremie", "Delta", "Jordan", "Kenyada"
-        ];
-        for(let name of vips){
-            if(input.value.toLowerCase() === name.toLowerCase()) {
-                input.style.color = "goldenrod";
-            }
+        console.log("input: " + input.value);
+        if(isVip(input.value)){
+            input.style.color = "goldenrod";
         }
     }
 
