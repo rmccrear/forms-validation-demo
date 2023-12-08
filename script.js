@@ -1,6 +1,81 @@
 console.log("hello");
 
+// TODO: create the table data
+let tableHeadRow = [
+    "Type",
+    "Skill Level",
+    "Time"
+]
+let tableRow1 = ["Djembe Drumming", "Beginner Level", "11:30-12:30"];
 
+let tableRow2 = [
+    "Djemebe Drumming",
+    "Advanced Level",
+    "12:30-1:30"
+];
+
+let tableRow3 = [
+    "Gutair Lessons",
+    "Beginner Level",
+    "2:0-3:00"
+];
+
+let tableRow4 = [
+    "Piano Lessons",
+    "Advanced Level",
+    "2:00 - 3:00",
+]
+
+let tableRow5 = [
+    "Bugle Lessons",
+    "Beginner Level",
+    "3:05-4:05",
+];
+
+let tableRows = [
+    tableHeadRow,
+    tableRow1,
+    tableRow2,
+    tableRow3,
+    tableRow4,
+    tableRow5
+]
+
+
+// TODO: select the table from the DOM
+let tableElm;
+tableElm = document.getElementById("lessons-table-2");
+
+
+// TODO: create the tr elements with a for loop
+// First, loop through the tableRows array with a for loop.
+let i = 0;
+for (let tableRow of tableRows) {
+   console.log(tableRow);
+   // tableRows[0] is ["type", "Skill Level", "time"]
+   // tableRows[1] is ["Djumbe Dumming", "Beginner Level", "11:30-12:30"]
+   let tr = document.createElement("tr");
+   for (let tableData of tableRow){
+    if (i===0){
+        let th = document.createElement("th");
+        th.textContent = tableData;
+        tr.appendChild(th);
+    } else {
+     // tr.textContent = tableRow[0];
+     // tableRow[0] is Trumpet Lesson
+     // tableRow[1] is Beginer Level
+     // tableRow[2] is 3:00-4:00
+     let td = document.createElement("td");
+     td.textContent = tableData;
+     tr.appendChild(td);
+    }
+   }
+   i++;   
+   tableElm.appendChild(tr);
+}
+
+
+// TODO: create the td elements with a for loop
 
 // TODO: Select all the inputs
 
